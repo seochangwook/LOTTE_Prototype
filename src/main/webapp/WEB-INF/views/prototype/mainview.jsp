@@ -13,6 +13,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<link rel="stylesheet" href="/css/common.css" type="text/css">
+<script src="/js/common.js"></script>
 </head>
 <body>
 	<div class="jumbotron text-center">
@@ -25,7 +28,7 @@
 	<div class="container">
   		<div class="row">
     			<div class="col-sm-4">
-      			<a href="http://127.0.0.1:8080/prototype/frameworksamplepage.do">
+      			<a href="http://${serverIp}:${serverPort}/prototype/frameworksamplepage.do">
       				<h3>Framework &nbsp;
       					<img src="/images/prototype/frameworkintroimage.png"  width="70" height="70">
       				</h3>
@@ -34,7 +37,7 @@
       			<p>Spring Boot, MVC, Maven, JDK, CommonJS, Exception, ...</p>
     			</div>
     			<div class="col-sm-4">
-      			<a href="http://127.0.0.1:8080/prototype/dataaccesssamplepage.do">
+      			<a href="http://${serverIp}:${serverPort}/prototype/dataaccesssamplepage.do">
       				<h3>Data Access &nbsp;
       					<img src="/images/prototype/dataaccessintroimage.png"  width="70" height="70">
       				</h3>
@@ -43,7 +46,7 @@
       			<p>Spring JPA, Mybatis, MSSQL, Oracle, MySQL, ...</p>
     			</div>
     			<div class="col-sm-4">
-      			<a href="http://127.0.0.1:8080/prototype/securitysamplepage.do">
+      			<a href="http://${serverIp}:${serverPort}/prototype/securitysamplepage.do">
       				<h3>	Security &nbsp;
       					<img src="/images/prototype/securityintroimage.png"  width="70" height="70">
       				</h3>
@@ -55,7 +58,7 @@
   		<br><br>
   		<div class="row">
     			<div class="col-sm-4">
-      			<a href="http://127.0.0.1:8080/prototype/etclibrarysamplepage.do">
+      			<a href="http://${serverIp}:${serverPort}/prototype/etclibrarysamplepage.do">
       				<h3>Etc Library &nbsp;
       					<img src="/images/prototype/etclibraryintroimage.png"  width="70" height="70">
       				</h3>
