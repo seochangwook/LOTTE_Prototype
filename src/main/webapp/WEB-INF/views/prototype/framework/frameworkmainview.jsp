@@ -64,14 +64,11 @@
       		</h1>
       		<p>표준 프레임워크 / 디자인 패턴을 반영하여 효율성 있는 개발이 가능하도록 하기 위함</p>
       		<hr class="hrset">
-      		<div ui-view></div>
+      		<div ui-view>
+      			<p style="text-align: center;">참고가 필요한 주제를 왼쪽 메뉴에서 선택하세요</p>
+      		</div>
     		</div>
   	</div>
 </div>
 </body>
-<script type="text/javascript">
-$(function(){
-	console.log('framework sample view load...')
-});
-</script>
 </html>
