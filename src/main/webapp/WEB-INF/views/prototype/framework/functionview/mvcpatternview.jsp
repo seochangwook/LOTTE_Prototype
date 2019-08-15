@@ -16,9 +16,39 @@
 
 <link rel="stylesheet" href="/css/common.css" type="text/css">
 <script src="/js/common.js"></script>
-<script src="/js/prototype/framework/function/mavenbuild.js"></script>
+<script src="/js/prototype/framework/function/mvcpattern.js"></script>
 </head>
 <body>
-	Maven Build View
+	<h2 style="text-align: center;">MVC Pattern</h2>
+	<br>
+	<br>
+	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<h4>Description</h4>
+    		</div>
+    		<div class="panel-body">
+    			<ul>
+				<li>test</li>
+			</ul>
+    		</div>
+  	</div>
+  	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<h4>Test</h4>
+    		</div>
+    		<div class="panel-body">
+    			test view
+    		</div>
+  	</div>
+  	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<h4>Reference Code</h4>
+    		</div>
+    		<div class="panel-body">
+    			<ul>
+				<li>test</li>
+			</ul>
+    		</div>
+  	</div>
 </body>
 </html>

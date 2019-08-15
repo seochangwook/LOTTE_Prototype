@@ -14,4 +14,8 @@ app.config(['$stateProvider', function($stateProvider){
 		url: '/mavenbuild',
 		templateUrl: 'mavenbuild'
 	})
+	.state('mvcpattern', {
+		url: '/mvcpattern',
+		templateUrl: 'mvcpattern'
+	})
 }]);

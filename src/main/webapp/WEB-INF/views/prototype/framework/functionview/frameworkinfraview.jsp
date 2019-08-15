@@ -16,13 +16,9 @@
 
 <link rel="stylesheet" href="/css/common.css" type="text/css">
 <script src="/js/common.js"></script>
+<script src="/js/prototype/framework/function/frameworkinfra.js"></script>
 </head>
 <body>
 	Framework Infra View
 </body>
-<script type="text/javascript">
-$(function(){
-	console.log('framework infra load...')
-});
-</script>
 </html>

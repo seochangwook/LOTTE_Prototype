@@ -52,4 +52,14 @@ public class FrameworkController {
 		
 		return mv;
     }
+	
+	@RequestMapping(value = "prototype/mvcpattern", method = RequestMethod.GET)
+    public ModelAndView mvcPatternView(ModelAndView mv){
+		mv.setViewName("prototype/framework/functionview/mvcpatternview");
+		
+		mv.addObject("serverIp", serverIp);
+		mv.addObject("serverPort", serverPort);
+		
+		return mv;
+    }
 }
