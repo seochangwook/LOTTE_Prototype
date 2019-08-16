@@ -19,6 +19,10 @@
 <script src="/js/prototype/framework/function/frameworkinfra.js"></script>
 </head>
 <body>
+	<!-- Server Info Setting -->
+	<input type="hidden" value="${serverIp}" id="serverip">
+	<input type="hidden" value="${serverPort}" id="serverport">
+	
 	Framework Infra View
 </body>
 </html>

@@ -19,6 +19,10 @@
 <script src="/js/prototype/framework/function/mavenbuild.js"></script>
 </head>
 <body>
+	<!-- Server Info Setting -->
+	<input type="hidden" value="${serverIp}" id="serverip">
+	<input type="hidden" value="${serverPort}" id="serverport">
+	
 	Maven Build View
 </body>
 </html>

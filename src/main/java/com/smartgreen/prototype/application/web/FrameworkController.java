@@ -1,8 +1,13 @@
 package com.smartgreen.prototype.application.web;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -62,4 +67,20 @@ public class FrameworkController {
 		
 		return mv;
     }
+	
+	/* Ajax Call(MVC Pattern Test) 
+	 * <Result Code>
+	 * Success : 1
+	 * Error : -1
+	 * */
+	@RequestMapping(value = "prototype/mvcpattern/test", method = RequestMethod.POST, produces = {"application/json"})
+	public @ResponseBody Map<String, Object> mvcPatternTestAjax(@RequestBody Map<String, Object> params) {	
+		System.out.println("input data: " + params.get("inputdata"));
+		
+		Map<String, Object> retVal = new HashMap<String, Object>();
+		
+		retVal.put("resultCode", "1");
+		
+		return retVal;
+	}
 }
