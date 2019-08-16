@@ -19,7 +19,11 @@
 <script src="/js/prototype/framework/function/mvcpattern.js"></script>
 </head>
 <body>
-	<h2 style="text-align: center;">MVC Pattern</h2>
+	<!-- Server Info Setting -->
+	<input type="hidden" value="${serverIp}" id="serverip">
+	<input type="hidden" value="${serverPort}" id="serverport">
+	
+	<h2 style="text-align: center;">3. MVC 디자인 패턴 적용</h2>
 	<br>
 	<br>
 	<div class="panel panel-default">
@@ -27,9 +31,13 @@
     			<h4>Description</h4>
     		</div>
     		<div class="panel-body">
-    			<ul>
-				<li>test</li>
-			</ul>
+    			<div class="panel panel-default">
+    				<div class="panel-body">
+    					<ul>
+						<li>test</li>
+					</ul>
+    				</div>
+  			</div>
     		</div>
   	</div>
   	<div class="panel panel-default">
@@ -37,7 +45,33 @@
     			<h4>Test</h4>
     		</div>
     		<div class="panel-body">
-    			test view
+    			<div class="panel panel-default">
+    				<div class="panel-body">
+    					<ul>
+						<li>입/출력 데이터 정의
+							<br>
+							<ul>
+								<li>Input : 원하는 정수형 숫자</li>
+								<li>Output : MVC 패턴을 적용하여 Input 값에 +5한 결과출력</li>
+							</ul>
+							<br>
+						</li>
+						<li>실행방법 : Input 데이터 입력 후 Run 버튼 클릭</li>
+						<li>예외상황 : @Repository에서 실제 DB Connection은 이루어지지 않음 (DB Connection은 Data Access 카테고리 참고)</li>
+					</ul>
+    				</div>
+  			</div>
+			<div class="panel panel-info">
+      			<div class="panel-heading">Input
+      				&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-sm" id="run-button">Run</button>
+      			</div>
+      			<div class="panel-body">
+      				<input type="text" class="form-control" placeholder="Input 데이터 입력" id="input-data">
+      			</div>
+    			</div>
+    			<div id="outputview">
+    				<!-- Output View -->
+    			</div>
     		</div>
   	</div>
   	<div class="panel panel-default">
@@ -45,9 +79,13 @@
     			<h4>Reference Code</h4>
     		</div>
     		<div class="panel-body">
-    			<ul>
-				<li>test</li>
-			</ul>
+    			<div class="panel panel-default">
+    				<div class="panel-body">
+    					<ul>
+						<li>test</li>
+					</ul>
+    				</div>
+  			</div>
     		</div>
   	</div>
 </body>
