@@ -3,6 +3,7 @@ package com.smartgreen.prototype.application.web;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.smartgreen.prototype.application.service.FrameworkService;
 
 /**
  * @프로그램 설명 : 프레임워크 기능 컨트롤러
@@ -27,6 +30,9 @@ public class FrameworkController {
 	
 	@Value("${server.port}")
 	private String serverPort;
+	
+	@Autowired
+	private FrameworkService frameworkService;
 	
 	@RequestMapping(value = "prototype/frameworksamplepage.do", method = RequestMethod.GET)
     public ModelAndView frameworkSampleView(ModelAndView mv){
@@ -75,11 +81,10 @@ public class FrameworkController {
 	 * */
 	@RequestMapping(value = "prototype/mvcpattern/test", method = RequestMethod.POST, produces = {"application/json"})
 	public @ResponseBody Map<String, Object> mvcPatternTestAjax(@RequestBody Map<String, Object> params) {	
-		System.out.println("input data: " + params.get("inputdata"));
-		
 		Map<String, Object> retVal = new HashMap<String, Object>();
 		
 		retVal.put("resultCode", "1");
+		retVal.put("resultValue", frameworkService.mvcPatternaddService(params));
 		
 		return retVal;
 	}

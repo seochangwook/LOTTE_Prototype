@@ -28,7 +28,7 @@ $(function(){
 			mimeType: 'application/json',
 			success: function(retVal){
 				if(retVal.resultCode == 1){
-					var returnHtml = success_normal_div(retVal.resultCode);
+					var returnHtml = success_normal_div(retVal.resultValue);
 					
 					$('#outputview').empty(); //view refresh//
 					$('#outputview').append(returnHtml);
