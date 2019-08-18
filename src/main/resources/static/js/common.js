@@ -1,19 +1,25 @@
 /* Error Page Redirect */
 function errorRedirectFunc(){
-	location.replace("http://127.0.0.1:8080/prototype/main.do")
+	var serverIp = $('#serverip').val();
+	var serverPort = $('#serverport').val();
+	
+	location.replace("http://"+serverIp+":"+serverPort+"/prototype/main.do")
 }
 
 /* Intro Page Redirect */
 function introRedirectFunc(){
-	location.replace("http://127.0.0.1:8080/prototype/main.do")
+	var serverIp = $('#serverip').val();
+	var serverPort = $('#serverport').val();
+	
+	location.replace("http://"+serverIp+":"+serverPort+"/prototype/main.do")
 }
 
 /* Test Success Normal div */
-function success_normal_div(resultdata){
+function success_normal_div(resultObject){
 	var returnHtml = '';
 	var resultHtml = '';
 	
-	resultHtml += '<input type="text" class="form-control" value="'+resultdata+'" readonly>';
+	resultHtml += '<input type="text" class="form-control" value="'+resultObject+'" readonly>';
 	
 	returnHtml += '<div class="panel panel-success">';
 	returnHtml += '<div class="panel-heading">output (success)</div>';
@@ -33,4 +39,19 @@ function error_div(){
 	returnHtml += '<div class="panel-body">테스트가 정상적으로 수행되지 않았습니다. (Server Error or Test Case Error)</div>';
 	
 	return returnHtml;
+}
+
+/* Ajax Normal POST JSON Form */
+function ajax_normalPostJSON(serverIp, serverPort, endPointUrl, jsondata, callbackSuccessHandlefunc, callbackErrorHandlefunc){
+	/* Ajax Call */
+	$.ajax({
+		url: "http://"+serverIp+":"+serverPort+endPointUrl,
+		type: 'POST',
+		dataType: 'json',
+		data: jsondata,
+		contentType: 'application/json',
+		mimeType: 'application/json',
+		success: callbackSuccessHandlefunc,
+		error: callbackErrorHandlefunc
+	});
 }

@@ -22,53 +22,57 @@
 <script src="/js/common.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>                        
-      		</button>
-      		<a class="navbar-brand" onclick="introRedirectFunc()">
-      			<img src="/images/prototype/lottelogo.png"  width="65" height="40" style="margin-top: -10px;">
-      		</a>
-    		</div>
-    		<div class="collapse navbar-collapse" id="myNavbar">
-      		<ul class="nav navbar-nav">
-	        		<li class="active">
-	        			<a href="#">Home</a>
-	        		</li>
-      		</ul>
-      		<ul class="nav navbar-nav navbar-right">
-        			<li>
-        				<a onclick="introRedirectFunc()">
-        					<span class="glyphicon glyphicon-log-in"></span> 
-        						Intro 돌아가기
-        				</a>
-        			</li>
-      		</ul>
-    		</div>
-  	</div>
-</nav> 
-<div class="container-fluid text-center">    
-	<div class="row content">
-    		<div class="col-sm-2 sidenav">
-      		<p class="rcorners"><a class="linkcolor" href="#!springbootinfra">1. Spring Boot 환경적용</a></p>
-      		<p class="rcorners"><a class="linkcolor" href="#!mavenbuild">2. Maven Build 환경적용</a></p>
-      		<p class="rcorners"><a class="linkcolor" href="#!mvcpattern">3. MVC 디자인 패턴 적용</a></p>
-    		</div>
-    		<div class="col-sm-8 text-left"> 
-      		<h1>Framework
-      			<img src="/images/prototype/frameworkintroimage.png"  width="70" height="70">
-      		</h1>
-      		<p>표준 프레임워크 / 디자인 패턴을 반영하여 효율성 있는 개발이 가능하도록 하기 위함</p>
-      		<hr class="hrset">
-      		<div ui-view style="overflow:auto; width:1240px; height:950px;">
-      			<p style="text-align: center;">참고가 필요한 주제를 왼쪽 메뉴에서 선택하세요</p>
-      		</div>
-    		</div>
-  	</div>
-</div>
+	<!-- Server Info Setting -->
+	<input type="hidden" value="${serverIp}" id="serverip">
+	<input type="hidden" value="${serverPort}" id="serverport">
+	
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        			<span class="icon-bar"></span>
+	        			<span class="icon-bar"></span>
+	        			<span class="icon-bar"></span>                        
+	      		</button>
+	      		<a class="navbar-brand" onclick="introRedirectFunc()">
+	      			<img src="/images/prototype/lottelogo.png"  width="65" height="40" style="margin-top: -10px;">
+	      		</a>
+	    		</div>
+	    		<div class="collapse navbar-collapse" id="myNavbar">
+	      		<ul class="nav navbar-nav">
+		        		<li class="active">
+		        			<a href="#">Home</a>
+		        		</li>
+	      		</ul>
+	      		<ul class="nav navbar-nav navbar-right">
+	        			<li>
+	        				<a onclick="introRedirectFunc()">
+	        					<span class="glyphicon glyphicon-log-in"></span> 
+	        						Intro 돌아가기
+	        				</a>
+	        			</li>
+	      		</ul>
+	    		</div>
+	  	</div>
+	</nav> 
+	<div class="container-fluid text-center">    
+		<div class="row content">
+	    		<div class="col-sm-2 sidenav">
+	      		<p class="rcorners"><a class="linkcolor" href="#!springbootinfra">1. Spring Boot 환경적용</a></p>
+	      		<p class="rcorners"><a class="linkcolor" href="#!mavenbuild">2. Maven Build 환경적용</a></p>
+	      		<p class="rcorners"><a class="linkcolor" href="#!mvcpattern">3. MVC 디자인 패턴 적용</a></p>
+	    		</div>
+	    		<div class="col-sm-8 text-left"> 
+	      		<h1>Framework
+	      			<img src="/images/prototype/frameworkintroimage.png"  width="70" height="70">
+	      		</h1>
+	      		<p>표준 프레임워크 / 디자인 패턴을 반영하여 효율성 있는 개발이 가능하도록 하기 위함</p>
+	      		<hr class="hrset">
+	      		<div ui-view style="overflow:auto; width:1240px; height:950px;">
+	      			<p style="text-align: center;">참고가 필요한 주제를 왼쪽 메뉴에서 선택하세요</p>
+	      		</div>
+	    		</div>
+	  	</div>
+	</div>
 </body>
 </html>

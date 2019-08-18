@@ -74,17 +74,11 @@ public class FrameworkController {
 		return mv;
     }
 	
-	/* Ajax Call(MVC Pattern Test) 
-	 * <Result Code>
-	 * Success : 1
-	 * Error : -1
-	 * */
 	@RequestMapping(value = "prototype/mvcpattern/test", method = RequestMethod.POST, produces = {"application/json"})
 	public @ResponseBody Map<String, Object> mvcPatternTestAjax(@RequestBody Map<String, Object> params) {	
 		Map<String, Object> retVal = new HashMap<String, Object>();
 		
-		retVal.put("resultCode", "1");
-		retVal.put("resultValue", frameworkService.mvcPatternaddService(params));
+		retVal.put("resultObject", frameworkService.mvcPatternaddService(params));
 		
 		return retVal;
 	}

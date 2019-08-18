@@ -69,9 +69,4 @@
   		</div>
 	</div>
 </body>
-<script type="text/javascript">
-$(function(){
-	console.log('mainview load...')
-});
-</script>
 </html>
