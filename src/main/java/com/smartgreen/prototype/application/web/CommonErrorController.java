@@ -3,6 +3,7 @@ package com.smartgreen.prototype.application.web;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,12 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @RestController
 public class CommonErrorController implements ErrorController{
+	@Value("${server.address}")
+	private String serverIp;
+	
+	@Value("${server.port}")
+	private String serverPort;
+	
 	@RequestMapping("/error")
     public ModelAndView handleError(ModelAndView mv, HttpServletRequest request) {
 		Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
@@ -30,15 +37,24 @@ public class CommonErrorController implements ErrorController{
 	        if(statusCode == HttpStatus.NOT_FOUND.value()) {
 	        		mv.setViewName("errors/404error");
 	        		
+	        		mv.addObject("serverIp", serverIp);
+	        		mv.addObject("serverPort", serverPort);
+	        		
 	            return mv;
 	        } else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
 	        		mv.setViewName("errors/500error");
+	        		
+	        		mv.addObject("serverIp", serverIp);
+	        		mv.addObject("serverPort", serverPort);
 	        		
 	            return mv;
 	        }
 	    }
 		
 		mv.setViewName("errors/etcerror");
+		
+		mv.addObject("serverIp", serverIp);
+		mv.addObject("serverPort", serverPort);
 		
 		return mv;
     }

@@ -18,6 +18,10 @@
 <link rel="stylesheet" href="/css/common.css" type="text/css">
 </head>
 <body>
+	<!-- Server Info Setting -->
+	<input type="hidden" value="${serverIp}" id="serverip">
+	<input type="hidden" value="${serverPort}" id="serverport">
+	
 	<div class="common-error-div">
 		<img src="/images/error/fixicon.png"  width="400" height="400">
 		<br><br><br>

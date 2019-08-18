@@ -34,7 +34,7 @@
     			<div class="panel panel-default">
     				<div class="panel-body">
     					<ul>
-						<li>test</li>
+						<li>테스트 설명 입니다.</li>
 					</ul>
     				</div>
   			</div>
@@ -65,9 +65,11 @@
       			<div class="panel-heading">Input
       				&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-sm" id="run-button">Run</button>
       			</div>
+      			<!-- 기능테스트 정의 Start -->
       			<div class="panel-body">
       				<input type="text" class="form-control" placeholder="Input 데이터 입력" id="input-data">
       			</div>
+      			<!-- 기능테스트 정의 End -->
     			</div>
     			<div id="outputview">
     				<!-- Output View -->
@@ -82,7 +84,30 @@
     			<div class="panel panel-default">
     				<div class="panel-body">
     					<ul>
-						<li>test</li>
+						<li>Java
+							<br>
+							<ul>
+								<li>	com.smartgreen.prototype.application.web.FrameworkController.java</li>
+								<li>com.smartgreen.prototype.application.service.FrameworkService.java</li>
+								<li>com.smartgreen.prototype.application.serviceimpl.FrameworkServiceImpl.java</li>
+								<li>com.smartgreen.prototype.application.domain.FrameworkDao.java</li>
+								<li>com.smartgreen.prototype.application.domain.FrameworkDaoImpl.java</li>
+							</ul>
+							<br>
+						</li>
+						<li>JavaScript
+							<br>
+							<ul>
+								<li>	/resources/static/js/prototype/framework/function/mvcpattern.js</li>
+							</ul>
+							<br>
+						</li>
+						<li>Java Server Pages
+							<br>
+							<ul>
+								<li>	/webapp/WEB-INF/views/prototype/framework/functionview/mvcpatternview.jsp</li>
+							</ul>
+						</li>
 					</ul>
     				</div>
   			</div>
