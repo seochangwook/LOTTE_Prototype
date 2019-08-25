@@ -16,14 +16,14 @@
 
 <link rel="stylesheet" href="/css/common.css" type="text/css">
 <script src="/js/common.js"></script>
-<script src="/js/prototype/framework/function/mvcpattern.js"></script>
+<script src="/js/prototype/framework/function/ajaxcall.js"></script>
 </head>
 <body>
 	<!-- Server Info Setting -->
 	<input type="hidden" value="${serverIp}" id="serverip">
 	<input type="hidden" value="${serverPort}" id="serverport">
 	
-	<h2 style="text-align: center;">3. MVC 디자인 패턴 적용</h2>
+	<h2 style="text-align: center;">4. Ajax Call (JSON 기반)</h2>
 	<br>
 	<br>
 	<div class="panel panel-default">
@@ -34,25 +34,7 @@
     			<div class="panel panel-default">
     				<div class="panel-body">
     					<ul>
-						<li>MVC(Model-View-Controller) 소프트웨어 공학에서 사용되는 소프트웨어 디자인 패턴이고, Web 개발의 표준 구성방식이다.</li>
-						<br>
-						<li>사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션의 시각적 요소나 Back 단에서 실행되는 비즈니스 로직을 서로 독립적으로 구현가능하다.</li>
-						<br>
-						<li>MVC의 구성요소는 3가지로 모텔, 뷰, 컨트롤러로 구성된다.
-							<br>
-							<ul>
-								<li>Model : 어떠한 동작을 수행하는 코드를 의미. 사용자에게 노출되지 않고 순수 public함수로만 구성</li>
-								<li>View : Model에게 질의하여 값을 가져와 사용자에게 보여준다.</li>
-								<li>Controller : 사용자는 Controller를 사용하여 Model의 상태를 변경한다.</li>
-							</ul>
-							<br>
-						</li>
-						<li>MVC 구성도(아래 그림참고)
-							<br>
-							<ul>
-								<img src="/images/prototype/framework/mvcpattern_image.png"  width="850" height="270">
-							</ul>
-						</li>
+						<li>테스트 설명</li>
 					</ul>
     				</div>
   			</div>
@@ -69,13 +51,13 @@
 						<li>입/출력 데이터 정의
 							<br>
 							<ul>
-								<li>Input : 원하는 정수형 숫자</li>
-								<li>Output : MVC 패턴을 적용하여 Input 값에 +5한 결과출력</li>
+								<li>Input : (Nothing)</li>
+								<li>Output : 홍길동의 '이름', '나이', '성별' 을 JSON 타입으로 반환</li>
 							</ul>
 							<br>
 						</li>
-						<li>실행방법 : Input 데이터 입력 후 Run 버튼 클릭</li>
-						<li>예외상황 : @Repository에서 실제 DB Connection은 이루어지지 않음 (DB Connection은 Data Access 카테고리 참고)</li>
+						<li>실행방법 : "Run" 버튼을 클릭하여 홍길동의 인사정보 데이터를 요청</li>
+						<li>예외상황 : JSON을 기본으로 지원하고 다른 데이터 타입은 추가필요 (common.js에 공통 메소드 작성, @RequestMapping의 produces 설정)</li>
 					</ul>
     				</div>
   			</div>
@@ -85,7 +67,7 @@
       			</div>
       			<!-- 기능테스트 정의 Start -->
       			<div class="panel-body">
-      				<input type="text" class="form-control" placeholder="Input 데이터 입력" id="input-data">
+      				<input type="text" class="form-control" placeholder="Nothing" id="input-data" readonly>
       			</div>
       			<!-- 기능테스트 정의 End -->
     			</div>
@@ -105,25 +87,21 @@
 						<li>Java
 							<br>
 							<ul>
-								<li>	com.smartgreen.prototype.application.web.FrameworkController.java</li>
-								<li>com.smartgreen.prototype.application.service.FrameworkService.java</li>
-								<li>com.smartgreen.prototype.application.serviceimpl.FrameworkServiceImpl.java</li>
-								<li>com.smartgreen.prototype.application.domain.FrameworkDao.java</li>
-								<li>com.smartgreen.prototype.application.domain.FrameworkDaoImpl.java</li>
+								<li>	test code</li>
 							</ul>
 							<br>
 						</li>
 						<li>JavaScript
 							<br>
 							<ul>
-								<li>	/resources/static/js/prototype/framework/function/mvcpattern.js</li>
+								<li>	test code</li>
 							</ul>
 							<br>
 						</li>
 						<li>Java Server Pages
 							<br>
 							<ul>
-								<li>	/webapp/WEB-INF/views/prototype/framework/functionview/mvcpatternview.jsp</li>
+								<li>	test code</li>
 							</ul>
 						</li>
 					</ul>
