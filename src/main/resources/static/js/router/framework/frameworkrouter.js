@@ -18,4 +18,8 @@ app.config(['$stateProvider', function($stateProvider){
 		url: '/mvcpattern',
 		templateUrl: 'mvcpattern'
 	})
+	.state('ajaxcall', {
+		url: '/ajaxcall',
+		templateUrl: 'ajaxcall'
+	})
 }]);
