@@ -97,7 +97,7 @@ public class FrameworkController {
 	public @ResponseBody Map<String, Object> ajaxCallTestAjax() {	
 		Map<String, Object> retVal = new HashMap<String, Object>();
 		
-		/* JSON Return type is Map<> */
+		/* JSON Return type is Map<> (JAVA Map<> is JSON)  */
 		Map<String, Object> humenInfo = new HashMap<String, Object>();
 		
 		humenInfo.put("name", "홍길동");
