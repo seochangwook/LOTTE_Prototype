@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -93,16 +94,32 @@ public class FrameworkController {
 		return mv;
     }
 	
-	@RequestMapping(value = "prototype/ajaxcall/test", method = RequestMethod.POST, produces = {"application/json"})
-	public @ResponseBody Map<String, Object> ajaxCallTestAjax() {	
+	@RequestMapping(value = "prototype/ajaxcall/testpost", method = RequestMethod.POST, produces = {"application/json"})
+	public @ResponseBody Map<String, Object> ajaxCallTestAjaxPOST(@RequestBody Map<String, Object> params) {	
 		Map<String, Object> retVal = new HashMap<String, Object>();
 		
+		Map<String, Object> resultInfo = new HashMap<String, Object>();
+		
+		resultInfo.put("result", "success");
+		
+		/* JSON 형태를 보여주기 위한 문자열 반환 (테스트용) */
+		retVal.put("resultObject", resultInfo.toString());
+		
+		/* JSON 형태로 사용하는 구조 (실제 사용해야 하는 메소드) */
+		//retVal.put("resultObject", resultInfo);
+		
+		return retVal;
+	}
+	
+	@RequestMapping(value = "prototype/ajaxcall/testget", method = RequestMethod.GET, produces = {"application/json"})
+	public @ResponseBody Map<String, Object> ajaxCallTestAjaxGET(@RequestParam("name") String name) {	
+		Map<String, Object> retVal = new HashMap<String, Object>();
+	
 		/* JSON Return type is Map<> (JAVA Map<> is JSON)  */
 		Map<String, Object> humenInfo = new HashMap<String, Object>();
 		
-		humenInfo.put("name", "홍길동");
-		humenInfo.put("age", 28);
-		humenInfo.put("gender", "남자");
+		humenInfo.put("name", name);
+		humenInfo.put("age", 1);
 		
 		/* JSON 형태를 보여주기 위한 문자열 반환 (테스트용) */
 		retVal.put("resultObject", humenInfo.toString());

@@ -18,9 +18,10 @@ $(function(){
 		
 		var trans_json = JSON.stringify(trans_objeect);
 		var endPointUrl = '/prototype/mvcpattern/test';
+		var resttype = 'POST'
 		
 		/* Ajax Call */
-		ajax_normalPostJSON(serverIp, serverPort, endPointUrl, trans_json, successHandlefunc, errorHandlefunc);
+		ajax_JSON(serverIp, serverPort, endPointUrl, resttype, trans_json, successHandlefunc, errorHandlefunc);
 	});
 });
 

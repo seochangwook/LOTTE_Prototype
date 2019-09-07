@@ -41,12 +41,12 @@ function error_div(){
 	return returnHtml;
 }
 
-/* Ajax Normal POST JSON Form */
-function ajax_normalPostJSON(serverIp, serverPort, endPointUrl, jsondata, callbackSuccessHandlefunc, callbackErrorHandlefunc){
+/* Ajax Call JSON Form */
+function ajax_JSON(serverIp, serverPort, endPointUrl, type, jsondata, callbackSuccessHandlefunc, callbackErrorHandlefunc){
 	/* Ajax Call */
 	$.ajax({
 		url: "http://"+serverIp+":"+serverPort+endPointUrl,
-		type: 'POST',
+		type: type,
 		dataType: 'json',
 		data: jsondata,
 		contentType: 'application/json',

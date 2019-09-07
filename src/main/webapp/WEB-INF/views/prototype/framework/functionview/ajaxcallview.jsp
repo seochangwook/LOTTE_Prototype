@@ -83,13 +83,35 @@
     					<ul>
 						<li>입/출력 데이터 정의
 							<br>
-							<ul>
-								<li>Input : (Nothing)</li>
-								<li>Output : 홍길동의 '이름', '나이', '성별' 을 JSON 타입으로 반환</li>
-							</ul>
 							<br>
+							<ul>
+								<table class="table table-bordered">
+    									<thead>
+      									<tr>
+        										<th>endPoint</th>
+        										<th>type</th>
+        										<th>data</th>
+        										<th>Result</th>
+      									</tr>
+    									</thead>
+    									<tbody>
+      									<tr>
+        										<td>/prototype/ajaxcall/testget</td>
+									    		<td>GET</td>
+									    		<td>?name="(Input)"</td>
+									    		<td>{'name':'(Input)', 'age':1}</td>
+      									</tr>
+      									<tr>
+									  		<td>/prototype/ajaxcall/testpost</td>
+        										<td>POST</td>
+        										<td>{'name':'(Input)'}</td>
+        										<td>{'result':'success'}</td>
+								      	</tr>
+    									</tbody>
+  								</table>
+							</ul>
 						</li>
-						<li>실행방법 : "Run" 버튼을 클릭하여 홍길동의 인사정보 데이터를 요청</li>
+						<li>실행방법 : 호출 Type을 선택하고 호출 데이터를 입력 후 Run 버튼 클릭</li>
 						<li>예외상황 : JSON을 기본으로 지원하고 다른 데이터 타입은 추가필요 (common.js에 공통 메소드 작성, @RequestMapping의 produces 설정)</li>
 					</ul>
     				</div>
@@ -100,7 +122,20 @@
       			</div>
       			<!-- 기능테스트 정의 Start -->
       			<div class="panel-body">
-      				<input type="text" class="form-control" placeholder="Nothing" id="input-data" readonly>
+      				<div>
+      					<label class="radio-inline">
+      						<input type="radio" name="resttype" value="GET">GET
+    						</label>
+    						<label class="radio-inline">
+      						<input type="radio" name="resttype" value="POST">POST
+    						</label>
+      				</div>
+      				<br>
+      				<div class="input-group">
+      					<span class="input-group-addon">Name</span>
+      					<input id="input-data-name" type="text" class="form-control" placeholder="Input Name">
+    					</div>
+    					<br>
       			</div>
       			<!-- 기능테스트 정의 End -->
     			</div>
