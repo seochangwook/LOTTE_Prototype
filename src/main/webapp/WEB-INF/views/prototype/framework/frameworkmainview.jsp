@@ -58,8 +58,8 @@
 	<div class="container-fluid text-center">    
 		<div class="row content">
 	    		<div class="col-sm-2 sidenav">
-	      		<p class="rcorners"><a class="linkcolor" href="#!springbootinfra">1. Spring Boot 환경적용</a></p>
-	      		<p class="rcorners"><a class="linkcolor" href="#!mavenbuild">2. Maven Build 환경적용</a></p>
+	      		<p class="rcorners"><a class="linkcolor" href="#!springbootinfra">1. Spring Boot 환경이해</a></p>
+	      		<p class="rcorners"><a class="linkcolor" href="#!mavenbuild">2. Maven Build 환경이해</a></p>
 	      		<p class="rcorners"><a class="linkcolor" href="#!mvcpattern">3. MVC 디자인 패턴 적용</a></p>
 	      		<p class="rcorners"><a class="linkcolor" href="#!ajaxcall">4. Ajax Call (JSON 기반)</a></p>
 	    		</div>

@@ -23,7 +23,7 @@
 	<input type="hidden" value="${serverIp}" id="serverip">
 	<input type="hidden" value="${serverPort}" id="serverport">
 	
-	<h2 style="text-align: center;">1. Spring Boot 환경적용</h2>
+	<h2 style="text-align: center;">1. Spring Boot 환경이해</h2>
 	<br>
 	<br>
 	<div class="panel panel-default">
