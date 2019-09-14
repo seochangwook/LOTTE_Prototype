@@ -50,8 +50,14 @@ $(function(){
 /* Success Callback Handle */
 function successHandlefunc(retVal){
 	$('#outputview').empty(); //view refresh//
+	var returnHtml = '';
 	
-	var returnHtml = success_normal_div(retVal.resultObject);
+	if(retVal.resultObject == 'fail'){
+		returnHtml = error_div();
+	} else{
+		returnHtml = success_normal_div(retVal.resultObject);
+	}
+	
 	$('#outputview').append(returnHtml);
 }
 
